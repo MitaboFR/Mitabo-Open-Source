@@ -213,7 +213,7 @@ def init_db():
                 u.set_password("demo1234")
                 db.session.add(u)
                 db.session.commit()
-                print("Utilisateur demo créé: demo@mitabo.dev / demo1234")
+                print("Utilisateur demo créé: demo@mitabo.dev / 1234")
             if Video.query.count() == 0:
                 user = User.query.first()
                 if user:
@@ -1056,4 +1056,5 @@ if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5000)
     from flask import Flask, render_template_string, request, redirect, url_for, flash, send_from_directory, send_file, abort, jsonify
 from flask_login import LoginManager, login_user, logout_user, current_user, login_required
+
 
